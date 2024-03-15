@@ -8,11 +8,20 @@ class MyComponent extends React.Component {
         age: 19
     }
 
+    handleClick(event) {
+        // console.log("My name is ", this.state.name)
+    }
+
+    handleOnMouseOver(event) {
+        console.log(event.pageX)
+    }
+
     render() {
         return (
             <div>
                 My name is {this.state.name}
-
+                <button onMouseOver={this.handleOnMouseOver}>Hover me</button>
+                <button onClick={this.handleClick}>Click me</button>
             </div>
         )
     }
