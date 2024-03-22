@@ -8,12 +8,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar-nav .nav-link.active,
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1450px !important;
+  }
+}
 
 .app-container {
   .header-container {
-    .navbar-nav {
-      opacity: 0.8;
+
+
+    .btn-login {
+      border-radius: 10px;
+      background: transparent;
+      border-width: initial;
+      border-style: none;
+      padding: 8px 10px;
+    }
+
+
+    .btn-signup {
+      padding: 8px 16px;
+      border-radius: 10px;
+      background: rgb(25, 25, 25);
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(25, 25, 25);
+      border-image: initial;
+      color: white;
+
+      &:hover {
+        background-color: rgba(25, 25, 25, 0.8);
+      }
+    }
+
+    .navbar {
+      padding-top: 20px;
+      opacity: 1;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0) !important;
 
       .nav-link {
         &.active {
@@ -22,11 +61,65 @@ body {
       }
     }
   }
-}
 
-video {
-  position: fixed;
-  // bottom: 0;
+  .main-container {
+    .homepage-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      padding-right: 7px;
+      padding-left: 46px;
+      // overflow: hidden;
 
-  // width: 100vw;
+      video {
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+      }
+
+      .homepage-content {
+        text-align: left;
+        align-items: flex-start;
+
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title-1 {
+          font-size: 80px;
+          line-height: 1;
+          color: rgb(25, 25, 25);
+        }
+
+        .title-2 {
+          text-wrap: balance;
+          margin-top: 32px;
+          font-size: 20px;
+
+        }
+
+        .title-3 {
+          .btn-getstart {
+            margin-top: 32px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            background: rgb(25, 25, 25);
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(25, 25, 25);
+            border-image: initial;
+            color: white;
+            font-size: 18px;
+
+            &:hover {
+              background-color: rgba(25, 25, 25, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
 }
