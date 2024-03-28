@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ModalCreateUser from './ModalCreateUser';
+import "./ManageUser.scss";
 
 function Example() {
     const [show, setShow] = useState(false);
@@ -73,8 +74,9 @@ const ManageUser = (props) => {
                 </div>
                 <div>
                     table users
-                    <ModalCreateUser />
+
                 </div>
+                <ModalCreateUser />
             </div>
         </div>
     )
